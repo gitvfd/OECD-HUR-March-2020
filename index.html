@@ -279,7 +279,7 @@
             svg.append("g")
                 .attr("class", "axisContext")
                 .call(d3.axisLeft(y).tickFormat(function (d) {
-                    return y.tickFormat(5, d3.format(",d"))(d)
+                    return y.tickFormat(5, d3.format(".1f"))(d)
                 }).tickSize(-(width)));
 
                
@@ -301,12 +301,14 @@
                 .attr("fill", z(timeLabel[1]));
            
                 svg.append("text")
+                .attr("class", "legendtext")
                 .attr("x", 4.5*n)
                 .attr("y", 9.5)
                 .attr("dy", "0.35em")
                 .text(timeLabel[0]);
 
             svg.append("text")
+                .attr("class", "legendtext")
                 .attr("x", 10.5 * n)
                 .attr("y", 9.5)
                 .attr("dy", "0.35em")
