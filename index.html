@@ -75,8 +75,8 @@
 
             <!--</div>-->
         
-        <h1>Total Unemployment rate</h1>
-        <h2>%</h2>
+        <h1>Unemployment rate</h1>
+        <h2>% of labour force</h2>
         <br>
         <div id="modedemploi">
            <div id="#intromodedemploi">Select a country:    </div>
@@ -116,7 +116,7 @@
         .attr("class", "tooltip")
         .style("opacity", 0);
 
-    d3.xml("https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/STLABOUR/AUS+AUT+BEL+CAN+CHL+COL+CZE+DNK+EST+FIN+FRA+DEU+GRC+HUN+ISL+IRL+ISR+ITA+JPN+KOR+LVA+LTU+LUX+MEX+NLD+NZL+NOR+POL+PRT+SVK+SVN+ESP+SWE+CHE+TUR+GBR+USA+OECD+BRA+IDN+RUS+ZAF.LRHU24TT+LRHUADTT+LRHUTTFE+LRHUTTMA+LRHUTTTT.STSA.M/all?startTime=2020-02&endTime=2020-03", function (data) {
+    d3.xml("https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/STLABOUR/AUS+AUT+BEL+CAN+CHL+COL+CZE+DNK+EST+FIN+FRA+DEU+GRC+HUN+ISL+IRL+ISR+ITA+JPN+KOR+LVA+LTU+LUX+MEX+NLD+NZL+NOR+POL+PRT+SVK+SVN+ESP+SWE+CHE+TUR+GBR+USA+OECD+G-7+EA19+BRA+IDN+RUS+ZAF.LRHU24TT+LRHUADTT+LRHUTTFE+LRHUTTMA+LRHUTTTT.STSA.M/all?startTime=2020-02&endTime=2020-03", function (data) {
             data = [].map.call(data.documentElement.getElementsByTagName("Series"), function (serie) {
              if(( serie.getElementsByTagName("Obs")[1]!==undefined ) ){
                 return {
